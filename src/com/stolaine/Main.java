@@ -9,8 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         Duck duck = new Duck(new SimpleQuack(), new DisplayAsText(), new SimpleFly());
-        duck.getQuackBehaviour().quack();
-        duck.getDisplayBehaviour().display();
-        duck.getFlyBehaviour().fly();
+        duck.quack();
+        duck.display();
     }
 }
