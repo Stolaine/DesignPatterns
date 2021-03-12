@@ -36,4 +36,9 @@ public class WeatherStation implements IObservable {
     public double getTemperature() {
         return this.temperature;
     }
+
+    public void setTemperature(double temperature) {
+        this.temperature = temperature;
+        notifyObserver();
+    }
 }
