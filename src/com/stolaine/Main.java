@@ -1,26 +1,16 @@
 package com.stolaine;
 
-import com.stolaine.observerPattern.observables.WeatherStation;
-import com.stolaine.observerPattern.observers.PhoneDisplay;
-import com.stolaine.observerPattern.observers.WindowDisplay;
+import com.stolaine.decoratorPattern.beverages.Decaf;
+import com.stolaine.decoratorPattern.data.Beverage;
+import com.stolaine.decoratorPattern.decorators.Caramel;
+import com.stolaine.decoratorPattern.decorators.Soy;
 
 public class Main {
 
     public static void main(String[] args) {
-        WeatherStation weatherStation = new WeatherStation();
-        PhoneDisplay display1 = new PhoneDisplay(weatherStation);
-        PhoneDisplay display2 = new PhoneDisplay(weatherStation);
-        WindowDisplay display3 = new WindowDisplay(weatherStation);
-
-        weatherStation.register(display1);
-        weatherStation.register(display2);
-        weatherStation.register(display3);
-
-        display1.display();
-
-        weatherStation.setTemperature(56.3);
-
-        display1.display();
-        display3.display();
+        Beverage beverage = new Decaf();
+        beverage = new Caramel(beverage);
+        beverage = new Soy(beverage);
+        System.out.println(beverage.cost());
     }
 }
