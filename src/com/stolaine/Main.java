@@ -3,10 +3,6 @@ package com.stolaine;
 import com.stolaine.observerPattern.observables.WeatherStation;
 import com.stolaine.observerPattern.observers.PhoneDisplay;
 import com.stolaine.observerPattern.observers.WindowDisplay;
-import com.stolaine.strategyPattern.data.Duck;
-import com.stolaine.strategyPattern.displayFeatures.DisplayAsText;
-import com.stolaine.strategyPattern.flyFeatures.SimpleFly;
-import com.stolaine.strategyPattern.quackFeatures.SimpleQuack;
 
 public class Main {
 
