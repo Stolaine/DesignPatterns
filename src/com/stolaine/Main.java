@@ -15,5 +15,12 @@ public class Main {
         weatherStation.register(display1);
         weatherStation.register(display2);
         weatherStation.register(display3);
+
+        display1.display();
+
+        weatherStation.setTemperature(56.3);
+
+        display1.display();
+        display3.display();
     }
 }
