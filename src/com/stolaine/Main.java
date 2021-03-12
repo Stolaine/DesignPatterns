@@ -11,5 +11,6 @@ public class Main {
         Duck duck = new Duck(new SimpleQuack(), new DisplayAsText(), new SimpleFly());
         duck.quack();
         duck.display();
+        duck.fly();
     }
 }
